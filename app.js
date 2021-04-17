@@ -2,7 +2,7 @@ window.onload = function  ( ){
 let pronoun = ['the','our'];
 let adj = ['great', 'big' ];
 let noun = ['jogger','racoon'];
-
+let domain_array = [];
 let domain = " Revisar la consola :D "// pronoun[(Math.floor(Math.random() * pronoun.length))] +
              // adj[(Math.floor(Math.random() * adj.length))] +
              // noun[(Math.floor(Math.random() * noun.length))] + ".com"
@@ -15,8 +15,10 @@ let domain = " Revisar la consola :D "// pronoun[(Math.floor(Math.random() * pro
 //    random_array = Math.floor(Math.random() * i)
 //    return random_array
 //}
-pronoun.forEach(item => adj.forEach(item2 => noun.forEach(item3 =>  console.log(item + item2 + item3 + ".com"))))
+//pronoun.forEach(item => adj.forEach(item2 => noun.forEach(item3 =>  console.log(item + item2 + item3 + ".com"))))
 
+pronoun.forEach(item => adj.forEach(item2 => noun.forEach(item3 =>  domain_array.push(item + item2 + item3 + ".com"))));
+console.log(domain_array);
 
-document.querySelector("#mensaje").innerHTML = domain;
+document.querySelector("#mensaje").innerHTML = domain_array;
 }
